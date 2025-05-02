@@ -9,6 +9,7 @@ List<BikeInformation> bikeInformationFromJson(String str) => List<BikeInformatio
 String bikeInformationToJson(List<BikeInformation> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class BikeInformation {
+<<<<<<< HEAD
   String? registrationNo;
   String ? rfidNo;
   String ? ownerFullName;
@@ -22,6 +23,19 @@ class BikeInformation {
   int ?dueYear;
   int ? dueAmount;
   String ? imagePath;
+=======
+  String ?registrationNo;
+  int? rfidNo;
+  String? ownerFullName;
+  String ?fatherName;
+  String? wordName;
+  String? nidNo;
+  String? contactNo;
+  String? permanentAddress;
+  String? presentAddress;
+  String ?fiscalYearName;
+  String ?imagePath;
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
 
   BikeInformation({
     this.registrationNo,
@@ -34,8 +48,11 @@ class BikeInformation {
     this.permanentAddress,
     this.presentAddress,
     this.fiscalYearName,
+<<<<<<< HEAD
     this.dueYear,
     this.dueAmount,
+=======
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
     this.imagePath,
   });
 
@@ -50,8 +67,11 @@ class BikeInformation {
     permanentAddress: json["permanentAddress"],
     presentAddress: json["presentAddress"],
     fiscalYearName: json["fiscalYearName"],
+<<<<<<< HEAD
     dueYear: json["dueYear"],
     dueAmount: json["dueAmount"],
+=======
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
     imagePath: json["imagePath"],
   );
 
@@ -66,8 +86,11 @@ class BikeInformation {
     "permanentAddress": permanentAddress,
     "presentAddress": presentAddress,
     "fiscalYearName": fiscalYearName,
+<<<<<<< HEAD
     "dueYear": dueYear,
     "dueAmount": dueAmount,
+=======
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
     "imagePath": imagePath,
   };
 }

@@ -2,16 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+<<<<<<< HEAD
 import 'package:kh_city/BikeInformation/Controller/bike_controller.dart';
 import 'package:kh_city/api/Bn_Urls.dart';
 
 import '../../BikeInformation/Model/bike_model.dart';
+=======
+
+
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
 import '../../Splash/splash_screen.dart';
 import '../../api/Bn_AppRoutes.dart';
 import '../../api/storage.dart';
 
 import '../LoginService/login_Screen.dart';
 
+<<<<<<< HEAD
 class HomeScreen extends StatelessWidget {
   void logout(BuildContext context) {
     storage.write('token', null); // Invalidate token
@@ -363,6 +369,80 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             )),
+=======
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+
+    void logout(BuildContext context) {
+      storage.write('token', null); // Invalidate token
+      Get.offAllNamed(AppRoutes.login); // Pop until reaching the root navigator
+    }
+
+
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        /// resizeToAvoidBottomInset: false,
+
+        appBar: AppBar(
+          backgroundColor: Colors.indigo,
+          title: const Text('Welcome TMS Dashbord', style: TextStyle(color: Colors.white)),
+          actions: <Widget>[
+            InkWell(
+                onTap: () {
+                  logout(context);
+                },
+                child: Tooltip(
+                    message: "Course Details",
+                    textStyle: const TextStyle(color: Colors.red),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        color: Colors.white,
+                        height: 60,
+                        child: Image.asset(
+                          'images/logout1.jpg',
+                        ),
+                      ),
+                    )))
+          ],
+        ),
+
+        body: ListView(
+          //padding: EdgeInsets.zero,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Container(
+                // alignment: Alignment.centerLeft,
+
+                //height: MediaQuery.of(context).size.height / 2.22,
+                width: MediaQuery.of(context).size.width / 2.62,
+                /*decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.only(bottomRight: Radius.circular(50))),*/
+
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 4,
+                  color: Colors.blue,
+                )
+              ],
+            ),
+
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
           ],
         ),
       ),
@@ -408,7 +488,11 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               title.toUpperCase(),
+<<<<<<< HEAD
               style: const TextStyle(
+=======
+              style: TextStyle(
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
                 color: Colors.black,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
@@ -419,6 +503,7 @@ class HomeScreen extends StatelessWidget {
         ),
       );
 }
+<<<<<<< HEAD
 Widget buildBikeImage(BikeInformation bike) {
   if (bike.imagePath != null && bike.imagePath!.isNotEmpty) {
     return SizedBox(
@@ -442,6 +527,8 @@ Widget buildBikeImage(BikeInformation bike) {
   }
 }
 
+=======
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
 
 Widget _buildCard(BuildContext context, String title, IconData icon, {VoidCallback? onPressed}) {
   return InkWell(
@@ -463,3 +550,8 @@ Widget _buildCard(BuildContext context, String title, IconData icon, {VoidCallba
     ),
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504

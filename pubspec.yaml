@@ -61,7 +61,11 @@ dev_dependencies:
   flutter_launcher_icons: ^0.13.1
 
 flutter_icons:
+<<<<<<< HEAD
     image_path: "images/new_logo.png"
+=======
+    image_path: "images/logo.png"
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
     android: "launcher_icon"
     iso: true
 

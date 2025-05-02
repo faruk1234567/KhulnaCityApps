@@ -1,9 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" /> 
     <application
         android:label="kh_city"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
+=======
+    <application
+        android:label="kh_city"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+>>>>>>> da5f52e185fa361f7686758d25b0dbaf1639d504
         <activity
             android:name=".MainActivity"
             android:exported="true"
